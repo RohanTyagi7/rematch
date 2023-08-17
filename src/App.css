@@ -1,5 +1,58 @@
-main {
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@450&display=swap');
+*{
+  font-family: 'Raleway', sans-serif;
+}
+.card{
+  float: left;
+  width: 23vw;
+  min-width: 400px;
+  height: auto;
+  border: #36d8e1 solid 2px;
+  border-radius: 10px;
+  background-color: aliceblue;
+  margin: 0.7vw;
+}
+button, .infile{
+  background-color: rgb(0, 160, 160);
+  border-radius: 12px;
+  color:azure;
+  border: 0px;
+  padding: 7px;
+  padding-left:10px;
+  padding-right: 10px;
+  margin: 5px;
+  transition-timing-function: ease-in-out;
+  transition: 0.2s;
+  cursor: pointer;
+  font-size: 14px;
+}
+button:hover, .infile:hover{
+  background-color: aliceblue;
+  color: black;
+  box-shadow: 10px 5px 5px #36d8e1ee;
+  transform:translateY(-2px)
+}
+button:active, .infile:active{
+
+  box-shadow: 5px 2.5px 2.5px #36d8e1ee;
+  transform:translateY(-0px)
+}
+input[type="file"] {
+  display: none;
+}
+.title{
   text-align: center;
-  vertical-align: center;
-  line-height: 100vh
+}
+.dispimg{
+  max-height: 30vh;
+  border-radius: 15px;
+  border:#36d8e1 5px solid;
+  transition-timing-function: ease-in-out;
+  transition: 0.2s;
+}
+.dispimg:hover{
+  max-height: 90vh;
+}
+.dispimg:active{
+  max-height: 90vh;
 }
