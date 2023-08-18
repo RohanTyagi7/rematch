@@ -326,7 +326,7 @@ const [base64Image, setBase64Image] = useState('');
       <div ref={componentRef}>
       {base64Image && <img src={base64Image} alt="Uploaded" className="dispimg"/>}
       <br></br>
-      {matchesShow?.map(({ Qual, time, Red1, Red2, Red3, Blue1, Blue2, Blue3, Status, infoBlue1, infoBlue2, infoBlue3, infoRed1, infoRed2, infoRed3 }) => (
+      {(matchesShow)?(matchesShow?.map(({ Qual, time, Red1, Red2, Red3, Blue1, Blue2, Blue3, Status, infoBlue1, infoBlue2, infoBlue3, infoRed1, infoRed2, infoRed3 }) => (
         (Status == "200")?
           (<div key={Qual} className="card" style={{backgroundColor: (Red1 == 4828 || Red2 == 4828 || Red3 == 4828 || Blue1 == 4828 || Blue2 == 4828 || Blue3 == 4828)?("yellow"):("")}}>
             <h3 className="title">Qualification Match {Qual}: {time}</h3>
@@ -342,7 +342,7 @@ const [base64Image, setBase64Image] = useState('');
           (<p></p>)
         
       
-      ))}
+      ))):(<p>Loading...</p>)}
       </div>
     </div>
   )
